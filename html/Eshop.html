@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+     <title> Eshop </title>
+     <link rel="stylesheet" type="text/css" href="">
+   </head>
+   <body>
+
+   <div id="mySidenav" class="sidenav">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <a href="#">Home</a>
+     <a href="#">About</a>
+     <a href="#">Eshop</a>
+     <a href="#">Contact</a>
+   </div>
+
+   <div id="main">
+     <h2>Wu-Tang Clan</h2>
+     <p>Wu-Tang Clan is an American hardcore hip hop group from New York City</p>
+     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+   </div>
+
+   <script>
+   function openNav() {
+     document.getElementById("mySidenav").style.width = "250px";
+     document.getElementById("main").style.marginLeft = "250px";
+   }
+
+   function closeNav() {
+     document.getElementById("mySidenav").style.width = "0";
+     document.getElementById("main").style.marginLeft= "0";
+   }
+   </script>
+
+   </body>
+
+</html>
