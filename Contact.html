@@ -6,6 +6,11 @@
      <link rel="stylesheet" type="text/css" href="css/Home.css">
    </head>
    <body>
+       <span style="font-size:30px; cursor:pointer; color: white" onclick="openNav()">&#9776;</span>
+
+    <div id="bg">
+    </div>
+
 
      <div id="mySidenav" class="sidenav">
        <button class="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
@@ -45,7 +50,7 @@
      </div>
 
    <div id="main">
-     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
      <h2>Wu-Tang Clan</h2>
      <p>Wu-Tang Clan is an American hardcore hip hop group from New York City</p>
 
@@ -62,17 +67,20 @@
      document.getElementById("main").style.marginLeft= "0";
    }
    </script>
-   <script>
-   // Get the modal
-   var modal = document.getElementById('id01');
+     <script>
+     // Get the modal
+       var modal = document.getElementById('id01');
 
    // When the user clicks anywhere outside of the modal, close it
-   window.onclick = function(event) {
-    if (event.target == modal) {
+    window.onclick = function(event) {
+       if (event.target == modal) {
         modal.style.display = "none";
+       }
     }
-}
-</script>
+   </script>
+     <footer align="center">
+       copyright 2019
+     </footer>
 
    </body>
 

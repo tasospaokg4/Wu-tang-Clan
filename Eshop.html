@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-   <head>
+  <head>
      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
      <title> Eshop </title>
      <link rel="stylesheet" type="text/css" href="css/Home.css">
-   </head>
-   <body>
+  </head>
+  <body>
+       <span style="font-size:30px; cursor:pointer; color: white" onclick="openNav()">&#9776;</span>
+
+   <div id="bg">
+   </div>
 
      <div id="mySidenav" class="sidenav">
        <button class="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
@@ -45,7 +49,7 @@
      </div>
 
    <div id="main">
-     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
      <h2>Wu-Tang Clan</h2>
      <p>Wu-Tang Clan is an American hardcore hip hop group from New York City</p>
 
@@ -63,17 +67,21 @@
    }
    </script>
    <script>
-   // Get the modal
-   var modal = document.getElementById('id01');
+      // Get the modal
+      var modal = document.getElementById('id01');
 
-   // When the user clicks anywhere outside of the modal, close it
-   window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
     }
 }
-</script>
+    </script>
 
-   </body>
+    <footer align="center">
+       copyright 2019
+    </footer>
+
+  </body>
 
 </html>

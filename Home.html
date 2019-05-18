@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html>
-   <head>
+  <head>
      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
      <title> Home </title>
      <link rel="stylesheet" type="text/css" href="css/Home.css">
-   </head>
-   <body>
+  </head>
+  <body>
+     <span style="font-size:30px; cursor:pointer; color: white" onclick="openNav()">&#9776;</span>
+  <div id="bg">
+  </div>
 
-     <div id="mySidenav" class="sidenav">
+   <div id="mySidenav" class="sidenav">
        <button class="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
      <div id="id01" class="modal">
 
      <form class="modal-content animate" action="/action_page.php">
-       <div class="imgcontainer">
-         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-         <img src="pics/img_avatar.png" alt="Avatar" class="avatar">
-       </div>
+     <div class="imgcontainer">
+       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+       <img src="pics/img_avatar.png" alt="Avatar" class="avatar">
+     </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+     <div class="container">
+         <label for="uname"><b>Username</b></label>
+         <input type="text" placeholder="Enter Username" name="uname" required>
+         <label for="psw"><b>Password</b></label>
+         <input type="password" placeholder="Enter Password" name="psw" required>
+       <button type="submit">Login</button>
+       <label>
+         <input type="checkbox" checked="checked" name="remember"> Remember me
+       </label>
+     </div>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
+     <div class="container" style="background-color:#f1f1f1">
+         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+         <span class="psw">Forgot <a href="#">password?</a></span>
+     </div>
+     </form>
+     </div>
        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="float:right;">&times;</a>
        <a href="Home.html">Home</a>
        <a href="About.html">About</a>
@@ -45,35 +46,37 @@
 
      </div>
 
-   <div id="main">
-     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-     <h2>Wu-Tang Clan</h2>
-     <p>Wu-Tang Clan is an American hardcore hip hop group from New York City</p>
-   </div>
+     <div id="main">
+         <h2>Wu-Tang Clan</h2>
+         <p>Wu-Tang Clan is an American hardcore hip hop group from New York City</p>
+     </div>
 
    <script>
-   function openNav() {
-     document.getElementById("mySidenav").style.width = "250px";
-     document.getElementById("main").style.marginLeft = "250px";
-   }
-   function closeNav() {
-     document.getElementById("mySidenav").style.width = "0";
-     document.getElementById("main").style.marginLeft= "0";
-   }
+     function openNav() {
+       document.getElementById("mySidenav").style.width = "250px";
+       document.getElementById("main").style.marginLeft = "250px";
+     }
+     function closeNav() {
+       document.getElementById("mySidenav").style.width = "0";
+       document.getElementById("main").style.marginLeft= "0";
+     }
    </script>
 
    <script>
-   // Get the modal
-   var modal = document.getElementById('id01');
+     // Get the modal
+     var modal = document.getElementById('id01');
 
-   // When the user clicks anywhere outside of the modal, close it
+     // When the user clicks anywhere outside of the modal, close it
    window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+     if (event.target == modal) {
+       modal.style.display = "none";
+     }
+   }
+  </script>
 
-   </body>
 
+  <footer align="center">
+     copyright 2019
+  </footer>
+</body>
 </html>
