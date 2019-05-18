@@ -11,6 +11,46 @@
     <div id="bg">
     </div>
 
+    <?php
+    $servernamedb = "localhost";
+    $usernamedb = "WuTankClan"; //prosoxi ayto pou mas deinei  to 000webhost
+    $passworddb = "WuTankClan";			//prosoxi ayto pou dilosame sto 000webhost
+    $databasedb = "id9603210_localhost"; //prosoxi ayto pou mas deinei  to 000webhost
+
+    // Create connection
+    $conn = mysqli_connect($servernamedb, $usernamedb, $passworddb, $databasedb);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    echo "Connected successfully";
+    $userid=0;
+
+    if(isset($_POST['submitChange'])) {
+      $newid = $_POST['newid'];
+      $userid = 	$_POST['id'];
+
+    //diavasma ifistamenis timis
+    echo "UPDATE  login SET  id=$newid WHERE  id=$userid";
+    $result = mysqli_query($conn,"UPDATE  login SET  id=$newid WHERE  id=$userid");
+
+    }
+    else if(isset($_POST['submit'])) {
+      mysqli_query($conn,"SET NAMES 'utf8'");
+      mysqli_query($conn,"SET CHARACTER SET 'utf8'");
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+      $result = mysqli_query($conn,"SELECT * FROM login WHERE email='$username' AND password='$password'");
+      $num_rows = mysqli_num_rows($result);
+
+      if($num_rows==1) {
+        while ($row = mysqli_fetch_array($result)) {
+          echo "Ο χρήστης ".$row['name']." συνδέθηκε επιτυχώς<br><br>";
+            $userid = $row['id'];
+        }
+      } ?>
 
      <div id="mySidenav" class="sidenav">
        <button class="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
