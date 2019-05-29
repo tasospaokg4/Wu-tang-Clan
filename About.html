@@ -32,7 +32,6 @@
       $newid = $_POST['newid'];
       $userid = 	$_POST['id'];
 
-    //diavasma ifistamenis timis
     echo "UPDATE  login SET  id=$newid WHERE  id=$userid";
     $result = mysqli_query($conn,"UPDATE  login SET  id=$newid WHERE  id=$userid");
 
@@ -51,6 +50,27 @@
             $userid = $row['id'];
         }
       } ?>
+
+      <form action=".php" method="post">
+    	<table>
+    		<tr><td>Νέο ΑΜ</td><td><input type="text" name="newid"></td></tr>
+    		<tr colspan="2"><td><input type="submit" name="submitChange" value="Υποβολή"></td></tr>
+    	 <input type="hidden" name="id" value="<?php echo $userid?>">
+    	</table>
+    </form>
+    		<?php
+    	}
+    	else {
+
+    		echo "<font color = 'red'>Λάθος όνομα χρήστη ή λάθος κωδικός</font><br><br>";
+    	?>
+    	<form action="db5.php" method="post">
+    	<table>
+    		<tr><td>Όνομα χρήστη</td><td><input type="text" name="username"></td></tr>
+    		<tr><td>Κωδικός</td><td><input type="password" name="password"></td></tr>
+    		<tr colspan="2"><td><input type="submit" name="submit" value="Υποβολή"></td></tr>
+    	</table>
+    </form>
 
    <div id="mySidenav" class="sidenav">
      <button class="loginbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
@@ -92,7 +112,7 @@
      <p> Το Wu-Tang Clan είναι μια αμερικανική ομάδα hardcore hip hop από τη Νέα Υόρκη </p>
 
      <p> Το Wu-Tang Clan έχει κυκλοφορήσει τέσσερα λευκώματα στούντιο χρυσού και πλατινένιου </p>
-     <p> Μέλη: RZA <img src="pics/RZA.jpg" alt="RZA" style="width:100%;max-width:300px">, GZA <img src="pics/GZA.jpg" alt="GZA" style="width:100%;max-width:300px"> , Ol' Dirty Bastard <img src="pics/Ol' Dirty Bastard.jpg" alt="Ol' Dirty Bastard" style="width:100%;max-width:400px">, Method Man <img src="pics/Method Man.jpg" alt="Method Man" style="width:100%;max-width:300px">, Raekwon <img src="pics/Raekwon.jpg" alt="Raekwon" style="width:100%;max-width:300px">, Ghostface Killah <img src="pics/Ghostface Killah.jpg" alt="Ghostface Killah" style="width:100%;max-width:300px">, Inspectah Deck <img src="pics/Inspectah Deck.jpg" alt="Inspectah Deck" style="width:100%;max-width:300px">, U-God <img src="pics/U-God.jpg" alt="U-God" style="width:100%;max-width:300px">, Masta Killa <img src="pics/Masta Killa.jpg" alt="Masta Killa" style="width:100%;max-width:300px">, Cappadonna <img src="pics/Cappadonna.jpg" alt="Cappadonna" style="width:100%;max-width:300px"> </p>
+     Μέλη: RZA <img src="pics/RZA.jpg" height="100">, GZA <img src="pics/GZA.jpg" height="100"> , Ol' Dirty Bastard <img src="pics/Ol'_Dirty_Bastard.jpg" height="100" >, Method Man <img src="pics/Method Man.jpg" height="100">, Raekwon <img src="pics/Raekwon.jpg" height="100">, Ghostface Killah <img src="pics/Ghostface Killah.jpg" height="100">, Inspectah Deck <img src="pics/Inspectah Deck.jpg" height="100">, U-God <img src="pics/U-God.jpg" height="100">, Masta Killa <img src="pics/Masta Killa.jpg" height="100">, Cappadonna <img src="pics/Cappadonna.jpg" height="100">
      <p> Το 1993, το πρώτο άλμπουμ τους, Enter the Wu-Tang (36 Chambers), θεωρείται ένα από τα μεγαλύτερα άλμπουμ στην ιστορία του hip hop </p>
      <p> Tο Clan Wu-Tang έχει ένα ευρύ φάσμα συνεργατών. Οι στενοί συνεργάτες σε μεμονωμένα μέλη ή στην ομάδα ως σύνολο περιλαμβάνουν ή συμπεριλάμβαναν κυρίως καλλιτέχνες με βάση την Ανατολική Ακτή, όπως οι Redman, Mobb Deep, Busta Rhymes, Erick Sermon, Nas, Pete Rock και άλλοι </p>
 

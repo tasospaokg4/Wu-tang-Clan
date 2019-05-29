@@ -51,6 +51,27 @@
            $userid = $row['id'];
        }
      } ?>
+     
+     <form action=".php" method="post">
+   	<table>
+   		<tr><td>Νέο ΑΜ</td><td><input type="text" name="newid"></td></tr>
+   		<tr colspan="2"><td><input type="submit" name="submitChange" value="Υποβολή"></td></tr>
+   	 <input type="hidden" name="id" value="<?php echo $userid?>">
+   	</table>
+   </form>
+   		<?php
+   	}
+   	else {
+
+   		echo "<font color = 'red'>Λάθος όνομα χρήστη ή λάθος κωδικός</font><br><br>";
+   	?>
+   	<form action="db5.php" method="post">
+   	<table>
+   		<tr><td>Όνομα χρήστη</td><td><input type="text" name="username"></td></tr>
+   		<tr><td>Κωδικός</td><td><input type="password" name="password"></td></tr>
+   		<tr colspan="2"><td><input type="submit" name="submit" value="Υποβολή"></td></tr>
+   	</table>
+   </form>
 
 
      <div id="mySidenav" class="sidenav">
